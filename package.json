@@ -1,0 +1,22 @@
+{
+  "author": "DIY Co <https://diy.org>",
+  "name": "fork-pool",
+  "description": "A generic child process pool for Node.js",
+  "version": "0.0.1",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "tap test/index.js"
+  },
+  "dependencies": {
+    "generic-pool": "2.0.X",
+    "underscore": "1.3.X"
+  },
+  "devDependencies": {
+    "async": "0.1.X",
+    "tap": "0.3.X"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": ">=0.6"
+  }
+}
