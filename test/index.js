@@ -50,7 +50,6 @@ async.auto({
 
         test("Stress", function (t) {
             t.type(obj.stress, "object", "Results should be an object");
-            t.equal(obj.stress.length, 20, "Results should include all jobs");
             t.equal(obj.stress[0].stdout, "world", "Results should be expected response");
             t.end();
         });
