@@ -1,5 +1,7 @@
 # Fork-Pool
 
+[![Build Status](https://secure.travis-ci.org/thisandagain/fork-pool.png?branch=master)](http://travis-ci.org/thisandagain/fork-pool)
+
 ## Installation
 
 ```bash
