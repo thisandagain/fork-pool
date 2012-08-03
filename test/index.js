@@ -21,7 +21,20 @@ async.auto({
         Pool.enqueue('hello', callback);
     },
 
-    test:   ['enqueue', function (callback, obj) {
+    stress:     function (callback) {
+        var load = [];
+        var instance = function (callback) {
+            Pool.enqueue('hello', callback);
+        };
+
+        for (var i = 0; i < 10; i++) {
+            load.push(instance);
+        }
+
+        async.parallel(load, callback);
+    },
+
+    test:   ['enqueue', 'stress', function (callback, obj) {
         test("Component definition", function (t) {
             t.type(Pool, "object", "Component should be an object");
             t.type(Pool.enqueue, "function", "Method should be a function");
@@ -32,6 +45,13 @@ async.auto({
         test("Enqueue", function (t) {
             t.type(obj.enqueue, "object", "Results should be an object");
             t.equal(obj.enqueue.stdout, "world", "Results should be expected response");
+            t.end();
+        });
+
+        test("Stress", function (t) {
+            t.type(obj.stress, "object", "Results should be an object");
+            t.equal(obj.stress.length, 10, "Results should equal input length");
+            t.equal(obj.stress[0].stdout, "world", "Results should be expected response");
             t.end();
         });
 
