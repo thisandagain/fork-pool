@@ -3,6 +3,10 @@
   "name": "fork-pool",
   "description": "A generic child process pool for Node.js",
   "version": "0.0.1",
+  "repository" : {
+      "type" : "git",
+      "url" : "git://github.com/thisandagain/fork-pool.git"
+  },
   "main": "./lib/index.js",
   "scripts": {
     "test": "tap test/index.js"

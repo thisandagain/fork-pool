@@ -1,7 +1,7 @@
 /**
  * Unit test suite.
  *
- * @package logo
+ * @package fork-pool
  * @author Andrew Sliwinski <andrew@diy.org>
  */
 
