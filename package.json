@@ -2,7 +2,7 @@
   "author": "DIY Co <https://diy.org>",
   "name": "fork-pool",
   "description": "A generic child process pool for Node.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository" : {
       "type" : "git",
       "url" : "git://github.com/thisandagain/fork-pool.git"
