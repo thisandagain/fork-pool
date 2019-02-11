@@ -35,6 +35,7 @@ process.on('message', function (message) {
     - size (Optional, Defaults to # of CPUs)
     - log (Optional, Defaults to false)
     - timeout (Optional, Defaults to 30000ms)
+    - disableThreading (Optional, Defaults to false) Default size will be limited to physical CPUs only if `true`
 
 ## Testing
 
